@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinta dos Cabeças - Guia de Boas-vindas</title>
+    <!-- Fonte Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+
+
+
+    <style>
+        /* Apenas para o título */
+        .subtitle {
+            font-family: "Cinzel", serif;
+            font-weight: 700;
+            /* Pode trocar para 400, 500, 900 etc */
+            font-size: 1.8rem;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #AE562B;
+            min-height: 100vh;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(176 102 80);
+            /*background-color: rgb(42 42 42 / 50%);*/
+        }
+
+        .modal-content {
+            background: #b06650;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .contact-card.app-card h4 {
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            zoom: 77%;
+            text-align: center;
+            margin-bottom: 30px;
+            background: #C78355;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: #AE562B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(174, 86, 43, 0.3);
+        }
+
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            color: white;
+        }
+
+        h1 {
+            color: #AE562B;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            background: #C78355;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .nav-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #AE562B;
+        }
+
+        .nav-item svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 15px;
+            stroke-width: 1.5;
+        }
+
+        .nav-item span {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section.hidden {
+            display: none;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #AE562B;
+
+            flex-direction: column;
+            /* força o h2 e o texto a ficarem embaixo */
+            align-items: flex-start;
+            /* opcional, alinha à esquerda */
+
+            gap: 10px;
+            /* espaço entre o ícone e o texto */
+        }
+
+        .section-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            stroke-width: 2;
+        }
+
+        .section h2 {
+            color: #AE562B;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .back-btn {
+            background: #AE562B;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            background: #8B4A26;
+            transform: translateY(-2px);
+        }
+
+        .info-card {
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            border-color: #AE562B;
+            box-shadow: 0 5px 15px rgba(174, 86, 43, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+            stroke-width: 2;
+        }
+
+        .info-card h3 {
+            color: #AE562B;
+            font-size: 1.0rem;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .contact-info2 p {
+            color: #f8f8f8;
+            font-size: 0.95rem;
+        }
+
+        .checkin-checkout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .checkin-card {
+
+            color: #555;
+            padding: 25px;
+
+
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+        }
+
+        .checkout-card {
+
+            color: #555;
+            padding: 25px;
+
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+        }
+
+        .checkin-card h3,
+        .checkout-card h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .checkin-card svg,
+        .checkout-card svg {
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+        }
+
+        .info-text {
+            background: #FDF8F0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid #AE562B;
+            text-align: justify;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 11px;
+            margin-bottom: 25px;
+        }
+
+        .featured-card {
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+            grid-column: 1 / -1;
+
+            color: #555;
+
+        }
+
+        .featured-card h3 {
+            color: #AE562B;
+        }
+
+        .featured-card .contact-info p {
+            color: #555;
+        }
+
+        .procedure-steps {
+            display: grid;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .step-card {
+
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(174, 86, 43, 0.2);
+        }
+
+        .step-number {
+            background: #AE562B;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 10px;
+        }
+
+        .step-content h3 {
+            color: #AE562B;
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .channels-grid {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .channel-category {
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .channel-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(174, 86, 43, 0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #AE562B;
+        }
+
+        .category-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .category-header h3 {
+            color: #AE562B;
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .channels-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .channel,
+        .channel-range {
+            background: #AE562B;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .channel:hover,
+        .channel-range:hover {
+            background: #8B4A26;
+        }
+
+        .channel-range {
+            background: #AE562B;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .channel-range:hover {
+            background: #C19660;
+        }
+
+        .contact-category {
+            margin-bottom: 30px;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-card {
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+            border-radius: 12px;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(174, 86, 43, 0.2);
+        }
+
+        .app-card {
+            background: #AE562B;
+            border-color: #FDF8F0;
+        }
+
+        .emergency-card {
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+        }
+
+        .contact-info h4 {
+            color: #AE562B;
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .phone-number {
+            display: block;
+            color: #AE562B;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            padding: 8px 12px;
+            background: rgba(174, 86, 43, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-number:hover {
+            background: #AE562B;
+            color: white;
+            transform: scale(1.02);
+        }
+
+        .phone-number.secondary {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .phone-number.emergency {
+            background: rgba(244, 67, 54, 0.1);
+            color: #AE562B;
+            font-weight: bold;
+        }
+
+        .phone-number.emergency:hover {
+            background: #F44336;
+            color: white;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        .coupons-grid {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .coupon-card {
+            background: #FDF8F0;
+            border: 2px solid #F6D4A3;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coupon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(174, 86, 43, 0.2);
+        }
+
+        .featured-coupon {
+            background: linear-gradient(135deg, #AE562B 0%, #8B4A26 100%);
+            color: white;
+            border-color: #8B4A26;
+        }
+
+        .featured-coupon p {
+            color: white;
+        }
+
+        .coupon-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .coupon-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .coupon-title {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .coupon-title h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #AE562B;
+        }
+
+        .featured-coupon .coupon-title h3 {
+            color: white;
+        }
+
+        .discount-badge {
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            align-self: flex-start;
+            animation: pulse 2s infinite;
+        }
+
+        .discount-badge.secondary {
+            background: #17a2b8;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .coupon-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: #AE562B;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .coupon-button:hover {
+            background: #F6D4A3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .coupon-instructions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(174, 86, 43, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #AE562B;
+        }
+
+        .delivery-grid {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .delivery-card {
+            background: #FDF8F0;
+            border: 2px solid #AE562B;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .delivery-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(174, 86, 43, 0.2);
+        }
+
+        .delivery-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .delivery-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .delivery-header h3 {
+            color: #AE562B;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .delivery-type {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 5px 0 10px 0;
+            font-style: italic;
+        }
+
+        .delivery-phone,
+        .delivery-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #AE562B;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .delivery-whatsapp {
+            display: block;
+            color: #AE562B;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            padding: 8px 12px;
+            background: rgba(174, 86, 43, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .delivery-phone:hover {
+            background: #8B4A26;
+            transform: translateY(-2px);
+        }
+
+        .delivery-whatsapp:hover {
+            background: #a1d5c0;
+            transform: translateY(-2px);
+        }
+
+        .suggestions-grid {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .suggestion-category {
+            background: #FDF8F0;
+            border: 2px solid #AE562B;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .suggestion-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(174, 86, 43, 0.15);
+        }
+
+        .suggestions-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .suggestion {
+            background: #AE562B;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .suggestion:hover {
+            background: #8B4A26;
+        }
+
+        .partners-grid {
+            display: grid;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .partner-card {
+            background: #FDF8F0;
+            border: 3px solid #AE562B;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(174, 86, 43, 0.3);
+        }
+
+        .partner-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .partner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .partner-card:hover .partner-image img {
+            transform: scale(1.05);
+        }
+
+        .partner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(174, 86, 43, 0.9));
+            color: white;
+            padding: 20px;
+        }
+
+        .partner-overlay h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .partner-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .partner-content {
+            padding: 25px;
+        }
+
+        .partner-title {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #AE562B;
+            padding-bottom: 15px;
+        }
+
+        .partner-title h4 {
+            color: #AE562B;
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .partner-title p {
+            margin: 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        .partner-routes {
+            margin-bottom: 20px;
+        }
+
+        .route-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(174, 86, 43, 0.2);
+        }
+
+        .route-item:last-child {
+            border-bottom: none;
+        }
+
+        .route-name {
+            flex: 1;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .route-price {
+            background: #AE562B;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .route-description p {
+            margin: 0;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .partner-info {
+            margin-bottom: 20px;
+            background: rgba(174, 86, 43, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .partner-notes {
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .partner-notes p {
+            margin: 0 0 8px 0;
+            color: #555;
+        }
+
+        .partner-notes em {
+            color: #666;
+        }
+
+        .partner-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .partner-whatsapp:hover {
+            background: #1DA851;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .modal-button-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(174, 86, 43, 0.2);
+        }
+
+        .enter-button {
+            background: white;
+    color: #8B4A26;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(174, 86, 43, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .enter-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(174, 86, 43, 0.4);
+            background: linear-gradient(135deg, #C4612F 0%, #9F5229 100%);
+        }
+
+        .enter-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(174, 86, 43, 0.3);
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .checkin-checkout {
+                grid-template-columns: 1fr;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Desktop */
+            gap: 20px;
+        }
+
+        .nav-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo base - funciona em todas as larguras */
+        .logo1,
+        .logo2 {
+            width: 159px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: url('../project/assets/Group%201000004373.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsivo - 2 colunas */
+        @media (max-width: 1024px) {
+            .nav-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px;
+
+            }
+
+            .section {
+                zoom: 58%;
+                background: rgba(255, 255, 255, 0.95);
+                margin: 20px 0;
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Responsivo - 1 coluna no celular */
+        @media (max-width: 480px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="container">
+
+        <!-- Estrutura do Modal -->
+        <div id="welcomeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <!-- Conteúdo original -->
+                <div class="header">
+                    <div class="logo1">
+
+                    </div>
+
+
+                    <p class="subtitle">Guia de Boas-vindas</p>
+                    <div class="welcome-text">
+                        <p><strong>Seja bem-vindo(a) à Pousada Quinta dos Cabeças!</strong></p>
+                        <p>Estamos muito felizes em recebê-lo(a) em nossa pousada. Este guia foi criado para tornar sua
+                            estadia ainda mais especial e confortável. Aqui você encontrará todas as informações
+                            importantes sobre nossa pousada e dicas valiosas sobre Capitólio.</p>
+                    </div>
+
+                    <div class="modal-button-container">
+                        <button class="enter-button" onclick="closeModal()">ENTRAR</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Navigation -->
+        <div id="home" class="section">
+            <div class="nav-grid">
+                <div class="nav-item" onclick="showSection('check-in-out')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
+                    </svg>
+                    <span>Check-in e Check-out</span>
+                </div>
+
+
+
+                <div class="nav-item" onclick="showSection('servicos')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                    </svg>
+                    <span>Wi-fi</span>
+                </div>
+                <div class="nav-item" onclick="showSection('inspire-capitolio-2')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span>Inspire Capitólio</span>
+                </div>
+                <div class="nav-item" onclick="showSection('regras-da-casa')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#AE562B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-notebook-pen">
+                        <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+                        <path d="M2 6h4" />
+                        <path d="M2 10h4" />
+                        <path d="M2 14h4" />
+                        <path d="M2 18h4" />
+                        <path
+                            d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                    </svg>
+                    <span>Regras da Casa</span>
+                </div>
+                <div class="nav-item" onclick="showSection('nossos-horarios')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Nossos Horários</span>
+                </div>
+                <div class="nav-item" onclick="showSection('lojinha')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>Lojinha</span>
+                </div>
+                <div class="nav-item" onclick="showSection('canais-disponiveis')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#AE562B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-tv">
+                        <path d="m17 2-5 5-5-5" />
+                        <rect width="20" height="15" x="2" y="7" rx="2" />
+                    </svg>
+                    <span>Canais Disponíveis</span>
+                </div>
+                <div class="nav-item" onclick="showSection('telefones-uteis')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>Telefones Úteis</span>
+                </div>
+                <div class="nav-item" onclick="showSection('cupons-desconto')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    </svg>
+                    <span>Cupons de Desconto</span>
+                </div>
+
+
+
+                <style>
+                    .nav-item {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        flex-direction: column;
+                    }
+
+                    .nav-item .material-symbols-outlined {
+                        width: 48px;
+                        height: 48px;
+                        margin-bottom: 15px;
+                        stroke-width: 1.5;
+                        color: #AE562B;
+                        font-size: 40px;
+                        margin-right: 8px;
+                    }
+                </style>
+
+                <div class="nav-item" onclick="showSection('onde-comer-2')">
+                    <!-- Ícone restaurante -->
+                    <span class="material-symbols-outlined">
+                        restaurant
+                    </span>
+                    <span>Onde Comer</span>
+                </div>
+                <div class="nav-item" onclick="showSection('parceiros')">
+                    <svg fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span>Agência de Passeios</span>
+                </div>
+                <div class="nav-item" onclick="showSection('kitenxoval')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#AE562B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-bed-double-icon lucide-bed-double">
+                        <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                        <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                        <path d="M12 4v6" />
+                        <path d="M2 18h20" />
+                    </svg>
+                    <span>Enxoval Extra</span>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Check-in e Check-out -->
+        <section id="check-in-out" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
+                </svg>
+                <h2>Procedimentos de entrada e saída</h2>
+            </div>
+
+            <div class="checkin-checkout">
+                <div class="checkin-card">
+                    <h3>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
+                        </svg>
+                        Check-in - A partir das 14hs
+
+                    </h3>
+                    <div style="margin-bottom: 15px;">
+
+                        <p style="font-size: 0.9rem; margin-bottom: 10px;">Obs.: Seu acesso para entrada só estará
+                            liberado após esse horário, para antecipação consulte disponibilidade pelo <a
+                                href="https://wa.me/5537999345635" target="_blank">WhatsApp (37) 99934-5635</a>, se for
+                            chegar após as 22hs, comunique pelo WhatsApp o atraso.</p>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <p style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+
+                            <span><strong>CHECK-IN ON-LINE COM BIOMETRIA FACIAL:</strong> Você recebeu um link, é bem
+                                simples, acesse e siga os passos. Após cadastrado, seu acesso estará liberado dentro dos
+                                horários contratados.</span>
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <p style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+
+                            <span><strong>RECONHECIMENTO FACIAL:</strong> Na porta principal, faça seu reconhecimento
+                                facial para destravá-la.</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p style="display: flex; align-items: flex-start;">
+
+                            <span><strong>CADASTRO ADICIONAL:</strong> Se quiser cadastrar mais pessoas, nos envie NOME
+                                COMPLETO e WHATSAPP da pessoa, que enviaremos o link.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="checkout-card">
+                    <h3>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                        Check-out - Até as 11hs
+                    </h3>
+                    <div style="margin-bottom: 15px;">
+
+                        <p style="font-size: 0.9rem; margin-bottom: 15px;">Obs.: A saída após esse horário será cobrada
+                            uma nova diária, caso desejar ficar além do período reservado, consulte a disponibilidade
+                            pelo <a href="https://wa.me/5537999345635" target="_blank">WhatsApp (37) 99934-5635</a> –
+                            temos a opção de meia diária no final de uma estadia
+                            completa.</p>
+                    </div>
+
+                    <div>
+                        <p style="display: flex; align-items: flex-start;">
+
+                            <span>Nosso check-out é simples e facilitado, deixe o
+                                cartão dentro do quarto, mantenha as portas fechadas e pronto! Na faxina as camareiras
+                                fazem a conferência.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Serviços -->
+        <section id="servicos" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                </svg>
+                <h2>Wi-Fi</h2>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8.111 16.404a5.5 5.5 0 717.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                    </svg>
+                    <h3>Wi-Fi Gratuito</h3>
+                </div>
+                <p><strong>Rede:</strong> Quinta dos Cabecas</p>
+                <p><strong>Senha:</strong> quinta2020</p>
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Parceiros -->
+        <section id="parceiros" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+
+                <div class="section-title">
+                    <h2>Agência de Passeios</h2>
+
+                </div>
+            </div>
+
+            <div class="partners-grid">
+
+
+                <!-- 4x4 Capitólio -->
+                <div class="partner-card">
+
+                    <div class="partner-content">
+                        <div class="partner-header">
+                            <h3>4x4 Capitólio</h3>
+                            <p>Guia Parceiro: <strong>Elbert</strong></p>
+                        </div>
+
+                        <div class="partner-title">
+                            <h4>ROTAS DAS CACHOEIRAS DE CAPITÓLIO</h4>
+                            <p>4x4 e suas taxas de visitação</p>
+                        </div>
+
+                        <div class="partner-routes">
+                            <div class="route-description">
+                                <p><strong>Roteiro completo:</strong> Recanto dos Vikings (6 cachoeiras)| Cachoeira
+                                    Paraíso Achado | Mirante da Hidrelétrica de Furnas | Cachoeira Beija Flor | Pedreira
+                                    da Lagoa Azul </p>
+                            </div>
+                        </div>
+
+                        <div class="partner-info">
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span><strong>Roteiro:</strong> Capitólio - São José da Barra - São João Batista do
+                                    Glória</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span><strong>Horário:</strong> Saída: 10h00 | Chegada: 17h30</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span><strong>Contato:</strong> (37) 99922-6012</span>
+                            </div>
+                        </div>
+
+                        <div class="partner-notes">
+                            <p><strong>Parada para almoço:</strong> Duas opções de restaurante para almoço.</p>
+                            <p><em>* Os passeios descritos são compartilhados, para passeios exclusivos favor consultar
+                                    os valores.</em></p>
+                            <p><em>* Hospedagem em períodos de festas e/ou feriados é importante o agendamento com
+                                    antecedência, devido ao alto fluxo de procura.</em></p>
+                            <p><em>* Obs: O carro passará na Pousada para levá-los ao passeio.</em></p>
+                            <p><em>* Obs: <strong>A Pousada Quinta dos Cabeças terceiriza os serviços de passeios,
+                                        cabendo total responsabilidade
+                                        de qualquer natureza, à empresa parceira. A mesma trabalha com lanchas e carros
+                                        novos e segurados,
+                                        sendo os carros todos com ar condicionado, para proporcionar o máximo de
+                                        conforto durante os passeios.</em></strong></p>
+                        </div>
+
+                        <a href="https://wa.me/5537999226012" target="_blank" class="partner-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Clique aqui e reserve seu passeio
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Serra da Canastra -->
+                <div class="partner-card">
+
+                    <div class="partner-content">
+                        <div class="partner-header">
+                            <h3>Serra da Canastra</h3>
+                            <p>Guia Parceiro: <strong>Elbert</strong></p>
+                        </div>
+
+                        <div class="partner-title">
+                            <h4>ROTAS SERRA DA CANASTRA</h4>
+                            <p>4x4 e suas taxas de visitação</p>
+                        </div>
+
+                        <div class="partner-routes">
+                            <div class="route-description">
+                                <p><strong>Roteiro completo:</strong> Cachoeira Casca D'Anta | Cachoeira do Chinelo |
+                                    Prainha de Copacabana </p>
+                            </div>
+                        </div>
+
+                        <div class="partner-info">
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span><strong>Roteiro:</strong> Serra da Canastra</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span><strong>Horário:</strong> Saída: 8h30 | Chegada: 18h30</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span><strong>Contato:</strong> (37) 99922-6012</span>
+                            </div>
+                        </div>
+
+                        <div class="partner-notes">
+                            <p><strong>Parada para almoço:</strong> Fazenda de Queijos Canastra | Restaurante
+                                Tradicional de Comida Mineira.</p>
+                            <p><em>* Obs: O carro passará na Pousada para levá-los ao passeio.</em></p>
+                            <p><em>* Obs. Importante: O roteiro Serra da Canastra exige um agendamento com antecedência,
+                                    verifique a disponibilidade. Não estão incluídas as taxas de entradas nas cachoeiras
+                                    no valor dos passeios, pois são todas particulares.</em></p>
+                            <p><em>* Os passeios descritos são compartilhados, para passeios exclusivos favor consultar
+                                    os valores.</em></p>
+                            <p><em>* Hospedagem em períodos de festas e/ou feriados é importante o agendamento com
+                                    antecedência, devido ao alto fluxo de procura.</em></p>
+                            <p><em>* Obs: <strong>A Pousada Quinta dos Cabeças terceiriza os serviços de passeios,
+                                        cabendo total responsabilidade
+                                        de qualquer natureza, à empresa parceira. A mesma trabalha com lanchas e carros
+                                        novos e segurados,
+                                        sendo os carros todos com ar condicionado, para proporcionar o máximo de
+                                        conforto durante os passeios.</em></strong></p>
+                        </div>
+
+                        <a href="https://wa.me/5537999226012" target="_blank" class="partner-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Clique aqui e reserve seu passeio
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Passeio de Lancha 7h -->
+                <div class="partner-card">
+
+                    <div class="partner-content">
+                        <div class="partner-header">
+                            <h3>Passeio de Lancha 7h</h3>
+                            <p>Empresa Parceira: <strong>Resolve Escarpas (Gustavo)</strong></p>
+                        </div>
+
+                        <div class="partner-title">
+                            <h4>TRAJETO DO PASSEIO DE LANCHA</h4>
+                            <p>Embarque no Bairro Ponta do Sol</p>
+                        </div>
+
+                        <div class="partner-routes">
+                            <div class="route-description">
+                                <p><strong>Roteiro completo:</strong> Escarpas do Lago | Lagão | Cânions | Lagoa Azul |
+                                    Cascatinha | Vale dos Tucanos | Cachoeira da Ilha | Porto Escarpas</p>
+                            </div>
+                        </div>
+
+                        <div class="partner-info">
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span><strong>Roteiro:</strong> Passeio de Lancha 7h</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span><strong>Horário:</strong> Saída Píer: 10h30 | Chegada: 17h30</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span><strong>Contato:</strong> (37) 9 9983-7171</span>
+                            </div>
+                        </div>
+
+                        <div class="partner-notes">
+                            
+                            <p><strong>Parada para almoço:</strong> Terá uma parada para almoço onde será definido na
+                                lancha o local, lembrando que temos 3 opção de restaurantes. *Este por conta de cada
+                                passageiro.</p>
+                            <p><em>* obs: O local de onde saem as embarcações ficam a 15 minutos de carro da Pousada, é
+                                    de extrema importância a chegada com antecedência no local. A Agência se encarregará
+                                    de passar todas as informações da localização do embarque.</em></p>
+                            <p><em>* Obs: <strong>A Pousada Quinta dos Cabeças terceiriza os serviços de passeios,
+                                        cabendo total responsabilidade
+                                        de qualquer natureza, à empresa parceira. A mesma trabalha com lanchas e carros
+                                        novos e segurados,
+                                        sendo os carros todos com ar condicionado, para proporcionar o máximo de
+                                        conforto durante os passeios.</em></strong></p>
+                        </div>
+
+                        <a href="https://wa.me/5537999837171" target="_blank" class="partner-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Clique aqui e reserve seu passeio
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Passeio de Lancha 3h -->
+                <div class="partner-card">
+
+                    <div class="partner-content">
+                        <div class="partner-header">
+                            <h3>Passeio de Lancha 3h</h3>
+                            <p>Empresa Parceira: <strong>Resolve Escarpas (Gustavo)</strong></p>
+                        </div>
+
+                        <div class="partner-title">
+                            <h4>TRAJETO DO PASSEIO DE LANCHA</h4>
+                            <p>Embarque na Ponte do Rio Turvo</p>
+                        </div>
+
+                        <div class="partner-routes">
+                            <div class="route-description">
+                                <p><strong>Roteiro:</strong> Lagoa Azul | Vale dos Tucanos | Cânions | Cascatinha | Bar
+                                    Flutuante</p>
+                            </div>
+                        </div>
+
+                        <div class="partner-info">
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span><strong>Roteiro:</strong> Passeio de Lancha 3h</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span><strong>Horário:</strong> A combinar</span>
+                            </div>
+                            <div class="info-row">
+                                <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span><strong>Contato:</strong> (37) 9 9983-7171</span>
+                            </div>
+                        </div>
+
+                        <div class="partner-notes">
+                          
+                            <p><em>* obs: O local de onde saem as embarcações ficam a 30 minutos de carro da Pousada, é
+                                    de extrema importância a chegada com antecedência no local. A Agência se encarregará
+                                    de passar todas as informações da localização do embarque.</em></p>
+
+                            
+                            <p><em>* Obs: <strong>A Pousada Quinta dos Cabeças terceiriza os serviços de passeios,
+                                        cabendo total responsabilidade
+                                        de qualquer natureza, à empresa parceira. A mesma trabalha com lanchas e carros
+                                        novos e segurados,
+                                        sendo os carros todos com ar condicionado, para proporcionar o máximo de
+                                        conforto durante os passeios.</em></strong></p>
+                        </div>
+
+                        <a href="https://wa.me/5537999837171" target="_blank" class="partner-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Clique aqui e reserve seu passeio
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Inspire Capitólio 2 -->
+        <section id="inspire-capitolio-2" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <h2>Inspire Capitólio</h2>
+            </div>
+
+            <div class="info-text">
+                <p>
+                    Capitólio hoje conta com mais de 50 cachoeiras catalogadas, muitos mirantes e trilhas de tirar o
+                    folego, para quem gosta de Turismo de Natureza aqui é o lugar!
+                    Sugerimos entrar no Google e verifique o passeio que mais enquadra no seu perfil.
+                    Para passeios com roteiros definidos, indicamos Agências de Turismo parceiras, para consulta
+                    <a href="#" onclick="showSection('parceiros')"
+                        style="color: #AE562B; text-decoration: underline; cursor: pointer; font-weight: bold;">CLIQUE
+                        AQUI</a>.
+                </p>.
+                </p>
+                <p><strong>Abaixo alguns lugares que indicamos para complementar sua experiência em Capitólio:</strong>
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="info-card">
+                    <div class="card-header">
+
+                        <h3>CAT – Centro de Apoio ao Turista | Loja de Artesenato</h3>
+
+                    </div>
+                    <div class="contact-info">
+                        <a href="https://wa.me/5537998304799 " target="_blank" class="phone-number">(37) 99830-4799 </a>
+                        <a href="tel:+553733731111" target="_blank" class="phone-number">(37) 3373-1111 </a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+
+                        <h3>Queijaria do Vicente</h3>
+                    </div>
+                    <div class="contact-info">
+                        <p><strong>Instagram:</strong> @queijariadovicente</p>
+                        <a href="https://wa.me/5537998064241" target="_blank" class="phone-number">(37) 99806-4241</a>
+
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+
+                        <h3>Cachaçaria Sossegada</h3>
+                    </div>
+                    <div class="contact-info">
+                        <p><strong>Instagram:</strong> @cachacasossegada</p>
+                        <a href="https://wa.me/5537999480013" target="_blank" class="phone-number">(37) 99948-0013</a>
+
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+
+                        <h3>Cachaçaria Rodriguinha</h3>
+                    </div>
+                    <div class="contact-info">
+                        <p><strong>Instagram:</strong> @cachacarodriguinha</p>
+                        <a href="https://wa.me/5537999652578" target="_blank" class="phone-number">(37) 99965-2578</a>
+
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+
+                        <h3>Destilaria Alejo's e Sacatrapo</h3>
+                    </div>
+                    <div class="contact-info">
+                        <p><strong>Instagram:</strong> @destilariaalejos</p>
+                        <a href="https://wa.me/5537998754492" target="_blank" class="phone-number">(37) 99875-4492</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Regras da Casa -->
+        <section id="regras-da-casa" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#5D8072" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-notebook-pen">
+                    <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+                    <path d="M2 6h4" />
+                    <path d="M2 10h4" />
+                    <path d="M2 14h4" />
+                    <path d="M2 18h4" />
+                    <path
+                        d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                </svg>
+                <h2>Regras da Casa</h2>
+            </div>
+
+            <div class="info-text">
+                <p><strong>Informações importantes</strong></p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Proibido Fumar</h3>
+                </div>
+                <p>Essa Pousada é 100% para NÃO FUMANTE, portanto, é proibido o uso de cigarros em qualquer área comum,
+                    principalmente nos quartos, caso constate o uso, será cobrado uma taxa de <strong>R$ 500 (quinhentos
+                        reais)</strong> para higienização das cortinas, cabeceira e colchão. Pedimos a COMPREENSÃO E O
+                    RESPEITO para com aqueles que não fumam e optaram por escolher esta Pousada para não fumantes.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Toalha de Banho</h3>
+                </div>
+                <p>É expressamente proibido levar as toalhas de banho do quarto para passeios, na recepção alugamos
+                    toalhas específicas para piscina e passeios <strong>(R$ 7 por toalha)</strong>.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Objetos Esquecidos</h3>
+                </div>
+                <p>A Pousada NÃO SE RESPONSABILIZA por objetos deixados nos quartos e nas áreas de uso comum, esses
+                    objetos serão guardados gratuitamente por 30 dias para sua retirada, após esse período, a Pousada
+                    fará doação do mesmo. NÃO ENVIAMOS itens esquecidos por correios, caso seja expressamente necessário
+                    o envio, tais como itens de valor sentimental, será cobrado uma taxa de <strong>R$ 100 + taxa dos
+                        correios</strong>.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Gaveta Utilidades</h3>
+                </div>
+                <p>Na recepção, em uma gaveta em baixo da cafeteira, "gaveta utilidades" temos secador extra, ferro de
+                    passar, inseticida, pilhas, controles, quando precisar, favor pegar, utilizar, e devolver caso outro
+                    hóspede necessite também.</p>
+                <p><strong>ATENÇÃO:</strong> Quando utilizar o ferro de passar roupas, CUIDADO para não queimar a colcha
+                    da cama, se acontecer, o valor de reposição será repassado para o hóspede.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Energia Elétrica</h3>
+                </div>
+                <p>As tomadas vermelhas são <strong>220v</strong> e as tomadas brancas <strong>127v</strong>.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Zona Rural - Insetos</h3>
+                </div>
+                <p>Por estarmos em uma zona rural, pode haver presença de insetos no quarto, o ideal é evitar deixar as
+                    portas e janelas abertas com luzes acesa ao anoitecer, se necessário, na gaveta tem inseticida
+                    aerossol.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Piscina - Segurança</h3>
+                </div>
+                <p>É PROIBIDO levar garrafas e copos de vidro quando estiver utilizando a piscina (na sua borda), devido
+                    ao risco de quebrar e ferir alguém, se houver descumprimento e acontecer de quebrar algum item
+                    próximo da piscina, todas as despesas de esvaziamento, limpeza e responsabilidades do ato serão
+                    repassados ao hóspede.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <img class="card-icon"
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNBRTU2MkIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tZXNzYWdlLXNxdWFyZS10ZXh0LWljb24gbHVjaWRlLW1lc3NhZ2Utc3F1YXJlLXRleHQiPjxwYXRoIGQ9Ik0yMiAxN2EyIDIgMCAwIDEtMiAySDYuODI4YTIgMiAwIDAgMC0xLjQxNC41ODZsLTIuMjAyIDIuMjAyQS43MS43MSAwIDAgMSAyIDIxLjI4NlY1YTIgMiAwIDAgMSAyLTJoMTZhMiAyIDAgMCAxIDIgMnoiLz48cGF0aCBkPSJNNyAxMWgxMCIvPjxwYXRoIGQ9Ik03IDE1aDYiLz48cGF0aCBkPSJNNyA3aDgiLz48L3N2Zz4="
+                        alt="Ícone Mensagem" />
+                    <h3>Informações Adicionais</h3>
+                </div>
+                <p>• Não oferecemos serviços de lavanderia;</p>
+                <p>• Não é permitido pendurar roupas e/ou toalhas no guarda corpo da varanda;</p>
+                <p>• Na compra de itens da nossa geladeira, emprestamos caixa térmica para levar em passeios;</p>
+                <p>• Não oferecemos serviços de bar e restaurante, temos alguns itens da nossa lojinha e geladeiras com
+                    bebidas disponíveis para compra, retire e efetue o pagamento nos terminais de autoatendimento;</p>
+                <p>• É PROIBIDO beber na recepção e/ou ficar conversando alto, respeite as outras pessoas.</p>
+            </div>
+        </section>
+
+        <!-- Nossos Horários -->
+        <section id="nossos-horarios" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2>Nossos Horários</h2>
+            </div>
+
+            <div class="info-text">
+                <p><strong>Horários de funcionamento</strong></p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 8h10m0 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2m10 0v10a2 2 0 01-2 2H9a2 2 0 01-2-2V8" />
+                    </svg>
+                    <h3>Café da Manhã</h3>
+                </div>
+                <p><strong>08h às 10h</strong></p>
+                <p>Servido no anexo próximo da piscina. Após as 10h a mesa é retirada.</p>
+            </div>
+
+
+
+
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
+                    </svg>
+                    <h3>Check-in</h3>
+                </div>
+                <p><strong>A partir das 14h</strong></p>
+                <p>
+                    Seu acesso para entrada só estará liberado após esse horário.
+                    Para antecipação consulte disponibilidade pelo
+                    <a href="https://wa.me/5537999345635" target="_blank">WhatsApp (37) 99934-5635</a>.
+                    Se for chegar após as 22h, comunique pelo WhatsApp o atraso.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    <h3>Check-out</h3>
+                </div>
+                <p><strong>Até as 11h</strong></p>
+                <p>A saída após esse horário será cobrada uma nova
+                    diária. Caso desejar ficar além do período reservado, consulte a disponibilidade pelo<a
+                        href="https://wa.me/5537999345635" target="_blank">WhatsApp (37) 99934-5635</a> – temos a opção
+                    de meia diária no final de uma estadia completa.</p>
+            </div>
+
+
+
+
+
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <h3>Arrumação de Quarto</h3>
+                </div>
+                <p>Se quiser que arrume seu quarto, deixar a plaquinha do lado de fora da porta do quarto <strong>até as
+                        11h</strong>.</p>
+                <p><strong>Obs.:</strong> Não entramos nos quartos sem autorização do hóspede. Caso queiram que troquem
+                    as toalhas, por gentileza deixe-as no chão.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    <h3>Solicitação Especial</h3>
+                </div>
+                <p>Qualquer solicitação especial que exige presença física de algum funcionário, deverá ser feita
+                    <strong>até as 14h</strong>. Após esse horário, não temos funcionário na Pousada, somente no dia
+                    seguinte.
+                </p>
+                <p><strong>Obs.:</strong> Algumas demandas conseguimos resolver pelo<a
+                        href="https://wa.me/5537999345635" target="_blank">WhatsApp (37) 99934-5635</a>.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    <h3>Iluminação e Portas</h3>
+                </div>
+                <p>A iluminação, som e portas do refeitório da área da piscina são automatizados e serão
+                    <strong>desligados e fechados todos os dias às 23h</strong>.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                    <h3>Horário do Descanso</h3>
+                </div>
+                <p>A área dos quartos é destinada ao descanso, por isso <strong>COLABORE</strong>. Após as <strong>22h:
+                        silêncio absoluto</strong>.</p>
+            </div>
+
+            <div class="info-card featured-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <h3>Importante</h3>
+                </div>
+                <p><strong>DEVIDO A NOSSA LOGÍSTICA COM HORÁRIOS DOS FUNCIONÁRIOS, NÃO ABRIMOS EXCEÇÃO ÀS REGRAS E
+                        HORÁRIOS DA POUSADA. PEDIMOS A COMPREENSÃO E AGRADECEMOS A ATENÇÃO.</strong></p>
+            </div>
+
+
+
+        </section>
+
+        <!-- Lojinha -->
+        <section id="lojinha" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <h2>Lojinha</h2>
+            </div>
+
+            <div class="info-text">
+                <p><strong>Como comprar?</strong></p>
+                <p>Somos uma Pousada de autoatendimento e simplificamos todos nossos serviços. É bem prático e rápido
+                    efetuar uma compra na nossa lojinha: ao lado das geladeiras (na recepção e no refeitório), tem
+                    terminais de autoatendimento com os itens e seus valores, siga os passos, efetue o pagamento e
+                    retire o item.</p>
+            </div>
+
+
+
+            <div class="info-card featured-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <h3>Autoatendimento 24h</h3>
+                </div>
+                <p>Nossa lojinha funciona 24 horas por dia através do sistema de autoatendimento. Você pode fazer suas
+                    compras a qualquer momento com total praticidade e segurança!</p>
+            </div>
+        </section>
+
+        <!-- Canais Disponíveis -->
+        <section id="canais-disponiveis" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#5D8072" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-tv">
+                    <path d="m17 2-5 5-5-5" />
+                    <rect width="20" height="15" x="2" y="7" rx="2" />
+                </svg>
+                <h2>Canais Disponíveis</h2>
+            </div>
+
+            <div class="channel-category">
+                <div class="category-header">
+                    <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <h3>ABERTO</h3>
+                </div>
+                <div class="channels-list">
+                    <span class="channel">2 TV CULTURA</span>
+                    <span class="channel">3 RIT</span>
+                    <span class="channel">12 GLOBO</span>
+                    <span class="channel">6 REDE VIDA</span>
+                    <span class="channel">407 REDE RECORD</span>
+                    <span class="channel">8 CANÇÃO NOVA</span>
+                    <span class="channel">409 SBT</span>
+                    <span class="channel">22 TV APARECIDA</span>
+                    <span class="channel">14 CNT</span>
+                    <span class="channel">415 REDE TV</span>
+                    <span class="channel">16 IDEAL TV</span>
+                    <span class="channel">17 REDE BRASIL</span>
+                    <span class="channel">18 TV PAI ETERNO</span>
+                    <span class="channel">19 RECORD NEWS</span>
+                    <span class="channel">20 RBI TV</span>
+                    <span class="channel">28 TV COMUNITÁRIA</span>
+                </div>
+            </div>
+
+            <div class="channels-grid">
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3>CORTESIA</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">31 SHOPTIME</span>
+                        <span class="channel">32 POLISHOP</span>
+                        <span class="channel">33 NOVO TEMPO</span>
+                        <span class="channel">434 FUTURA</span>
+                        <span class="channel">163 TERRA VIVA</span>
+                        <span class="channel">164 CANAL RURAL</span>
+                        <span class="channel">165 REDE GOSPEL</span>
+                        <span class="channel">166 CANAL DO CRIADOR</span>
+                        <span class="channel">173 CANAL CGNT</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V3a1 1 0 011 1v9.5A1.5 1.5 0 0116.5 15H8.5A1.5 1.5 0 017 13.5V4z" />
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        </svg>
+                        <h3>FILMES E SÉRIES</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">507 MEGAPIX</span>
+                        <span class="channel">508 TNT</span>
+                        <span class="channel">513 CANAL BRASIL</span>
+                        <span class="channel">537 SONY CHANNEL</span>
+                        <span class="channel">539 WARNER</span>
+                        <span class="channel">540 UNIVERSAL</span>
+                        <span class="channel">541 STAR CHANNEL</span>
+                        <span class="channel">157 PRIME BOX BRASIL</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                        </svg>
+                        <h3>RÁDIO</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel-range">776 A 796</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                        <h3>SOUND</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel-range">701 A 730</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                        <h3>STINGRAY</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel-range">734 A 763</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <h3>PÚBLICOS</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">21 TV ESCOLA</span>
+                        <span class="channel">22 TV CÂMARA</span>
+                        <span class="channel">23 TV BRASIL</span>
+                        <span class="channel">24 TV JUSTIÇA</span>
+                        <span class="channel">25 TV BRASIL 2</span>
+                        <span class="channel">26 TV SENADO</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <h3>CULTURA</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">470 DISCOVERY</span>
+                        <span class="channel">478 NAT GEO</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <h3>ESPORTE</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">438 SPORTV</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3>INFANTIL</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">450 DISCOVERY KIDS</span>
+                        <span class="channel">455 DISCOVERY CHANNEL</span>
+                        <span class="channel">456 GLOOB</span>
+                        <span class="channel">460 CARTOON NETWORK</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                        <h3>VARIEDADES</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">441 GNT</span>
+                        <span class="channel">442 MULTISHOW</span>
+                        <span class="channel">443 VIVA</span>
+                        <span class="channel">444 MODO VIAGEM</span>
+                        <span class="channel">161 TV WA</span>
+                        <span class="channel">162 FISH TV</span>
+                    </div>
+                </div>
+
+                <div class="channel-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                        </svg>
+                        <h3>NOTÍCIAS</h3>
+                    </div>
+                    <div class="channels-list">
+                        <span class="channel">440 GLOBONEWS</span>
+                        <span class="channel">170 CLIMATEMPO</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Telefones Úteis -->
+        <section id="telefones-uteis" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <h2>Telefones Úteis</h2>
+            </div>
+
+            <div class="info-text">
+                <p><strong>Contatos importantes</strong></p>
+            </div>
+
+            <div class="contact-category">
+                <div class="category-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#AE562B" stroke-width="2" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-smartphone">
+                        <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                        <path d="M12 18h.01" />
+                    </svg>
+                    <h3>Aplicativo de Transporte</h3>
+                </div>
+                <div class="contact-card app-card">
+                    <div class="contact-info2">
+                        <h4 style="color: #fff;">UBY CAPITÓLIO</h4>
+                        <p>Aplicativo de transporte privado urbano</p>
+                        <a href="https://www.instagram.com/ubycapitolio/" target="_blank" class="download-btn">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                            </svg>
+                            Baixe Clicando aqui
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-category">
+                <div class="category-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#AE562B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-car-taxi-front-icon lucide-car-taxi-front">
+                        <path d="M10 2h4" />
+                        <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8" />
+                        <path d="M7 14h.01" />
+                        <path d="M17 14h.01" />
+                        <rect width="18" height="8" x="3" y="10" rx="2" />
+                        <path d="M5 18v2" />
+                        <path d="M19 18v2" />
+                    </svg>
+                    <h3>Taxi (Contato direto)</h3>
+                </div>
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Danilo</h4>
+                            <a href="https://wa.me/5537999961400" target="_blank" class="phone-number">(37)
+                                99996-1400</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Abeia</h4>
+                            <a href="https://wa.me/5537999628873" target="_blank" class="phone-number">(37)
+                                99962-8873</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Vonei</h4>
+                            <a href="https://wa.me/5537999612743" target="_blank" class="phone-number">(37)
+                                99961-2743</a>
+                            <a href="https://wa.me/55379911135690" target="_blank" class="phone-number secondary">(37)
+                                99111-35690</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Cláudia</h4>
+                            <a href="https://wa.me/5537998052055" target="_blank" class="phone-number">(37)
+                                99805-2055</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Edinho</h4>
+                            <a href="https://wa.me/5537998075344" target="_blank" class="phone-number">(37)
+                                99807-5344</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Joaquim</h4>
+                            <a href="https://wa.me/5537998320866" target="_blank" class="phone-number">(37)
+                                99832-0866</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Ailton</h4>
+                            <a href="https://wa.me/5537991069639" target="_blank" class="phone-number">(37)
+                                99106-9639</a>
+                            <a href="https://wa.me/5537999467865" target="_blank" class="phone-number secondary">(37)
+                                99946-7865</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Arthur</h4>
+                            <a href="https://wa.me/5537999029381" target="_blank" class="phone-number">(37)
+                                99902-9381</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-category">
+                <div class="category-header">
+                    <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3>Santa Casa</h3>
+                </div>
+                <div class="contact-card emergency-card">
+                    <div class="contact-info">
+                        <h4>Hospital Santa Casa</h4>
+                        <a href="tel:+553733731289" class="phone-number emergency">(37) 3373-1289</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-category">
+                <div class="category-header">
+                    <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                    <h3>Farmácia</h3>
+                </div>
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <h4>Farmácia</h4>
+                            <a href="https://wa.me/5537999032608" target="_blank" class="phone-number">(37)
+                                99903-2608</a>
+                            <a href="https://wa.me/5537999055291" target="_blank" class="phone-number">(37)
+                                99905-5291</a>
+                            <a href="tel:+553733731100" class="phone-number secondary">(37) 3373-1100</a>
+                            <a href="tel:+553733731267" class="phone-number secondary">(37) 3373-1267</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cupons de Desconto -->
+        <section id="cupons-desconto" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg class="section-icon" fill="none" stroke="#5D8072" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                </svg>
+                <h2>Cupons de Desconto</h2>
+            </div>
+
+            <div class="info-text">
+                <p><strong>Ofertas e promoções ativas</strong></p>
+            </div>
+
+            <div class="coupons-grid">
+                <div class="coupon-card featured-coupon">
+                    <div class="coupon-header">
+                        <svg class="coupon-icon" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        <div class="coupon-title">
+                            <h3>Parque PAUÁ | Mirante dos Canyons</h3>
+                            <div class="discount-badge">20% OFF</div>
+                        </div>
+                    </div>
+                    <p>Ganhe 20% de desconto comprando pelo nosso link exclusivo!</p>
+                    <a href="https://bit.ly/quintadoscabecasPMC" target="_blank" class="coupon-button">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Comprar com Desconto
+                    </a>
+                </div>
+
+
+
+                <div class="coupon-card featured-coupon">
+                    <div class="coupon-header">
+                        <svg class="coupon-icon" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        <div class="coupon-title">
+                            <h3>Cachoeira Canela de Ema</h3>
+                            <div class="discount-badge">10% OFF</div>
+                        </div>
+                    </div>
+                    <p><strong>Complexo Ecológico</strong></p>
+                    <p>Ganhe 10% de desconto comprando pelo nosso link exclusivo!</p>
+                    <a href="https://reservas.caneladeemacapitolio.com.br?s=pousadaquintadoacabeças" target="_blank"
+                        class="coupon-button">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Comprar com Desconto
+                    </a>
+                </div>
+
+                <div class="coupon-card">
+                    <div class="coupon-header">
+                        <svg class="coupon-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <div class="coupon-title">
+                            <h3>Cachoeira da Capivara</h3>
+                            <div class="discount-badge secondary">10% OFF</div>
+                        </div>
+                    </div>
+                    <p><strong>Complexo Ecológico</strong></p>
+                    <p>Solicite na recepção da cachoeira, 10% de desconto no valor do acesso dizendo que está hospedado
+                        conosco.</p>
+                    <div class="coupon-instructions">
+                        <svg width="16" height="16" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Mencione que está hospedado na Quinta dos Cabeças</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="info-card featured-card">
+                <div class="card-header">
+                    <svg class="card-icon" fill="none" stroke="white" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                    <h3>Aproveite as Ofertas!</h3>
+                </div>
+                <p>Estes descontos são exclusivos para hóspedes da Quinta dos Cabeças. Não esqueça de mencionar que está
+                    hospedado conosco para garantir sua economia!</p>
+            </div>
+        </section>
+
+
+
+        <!-- Onde Comer -->
+        <section id="onde-comer-2" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <!-- Ícone de restaurante -->
+                <span class="material-symbols-outlined section-icon" style="color:#5D8072; font-size:32px;">
+                    restaurant
+                </span>
+                <h2>Onde Comer</h2>
+            </div>
+
+            <!-- Delivery Section -->
+            <div class="info-text">
+                <p><strong>Contato para DELIVERY:</strong></p>
+            </div>
+
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Restaurante e Bar Central $$</h3>
+                    </div>
+                    <p class="delivery-type">Almoço e Jantar</p>
+                    <a href="tel:(37)3373-1511" class="delivery-phone">(37) 3373-1511</a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Sô Bello $$$</h3>
+                    </div>
+                    <p class="delivery-type">Jantar</p>
+
+
+                    <a href="https://wa.me/5537999879868" target="_blank" class="delivery-whatsapp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                        </svg>
+                        (37) 99987-9868
+                    </a>
+
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Stop Burger $$</h3>
+                    </div>
+                    <p class="delivery-type">Hamburgueria Artesanal</p>
+                    <a href="https://wa.me/5537998746221" target="_blank" class="delivery-whatsapp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                        </svg>
+                        (37) 99874-6221
+                    </a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Texas Burger $$</h3>
+                    </div>
+                    <p class="delivery-type">Hamburgueria Artesanal</p>
+                    <a href="https://wa.me/5537998131034" target="_blank" class="delivery-whatsapp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                        </svg>
+                        (37) 99813-1034
+                    </a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                            <span class="material-symbols-outlined delivery-icon"
+                                style="color:#AE562B; font-size:26px;">
+                                restaurant
+                            </span>
+                            <h3>Pizzaria Capitólio $$</h3>
+                    </div>
+                    <p class="delivery-type">Pizza</p>
+                    <a href="https://wa.me/5537991271084" target="_blank" class="delivery-whatsapp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                        </svg>
+                        (37) 99127-1084
+                    </a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Mizu $$$$</h3>
+                    </div>
+                    <p class="delivery-type">Culinária Japonesa</p>
+                    <a href="https://wa.me/5537999593192" target="_blank" class="delivery-whatsapp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                        </svg>
+                        (37) 99959-3192
+                    </a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Dabbur $$$</h3>
+                    </div>
+                    <p class="delivery-type">Culinária Árabe</p>
+                    <a href="https://wa.me/5537999945125" target="_blank" class="delivery-whatsapp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                        </svg>
+                        (37) 99994-5125
+                    </a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Fogão de Lenha $$</h3>
+                    </div>
+                    <p class="delivery-type">Almoço</p>
+                    <a href="tel:(37)3373-1175" class="delivery-phone">(37) 3373-1175</a>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-header">
+                        <!-- Ícone restaurante -->
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Tropeiro $$</h3>
+                    </div>
+                    <p class="delivery-type">Almoço</p>
+                    <a href="tel:(37)3373-1665" class="delivery-phone">(37) 3373-1665</a>
+                </div>
+            </div>
+
+            <!-- Sugestões Section -->
+            <div class="info-text" style="margin-top: 40px;">
+                <p><strong>Sugestões BARES E RESTAURANTE:</strong></p>
+            </div>
+
+            <div class="suggestions-grid">
+                <div class="suggestion-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                        <h3>Restaurantes Noturnos</h3>
+                    </div>
+                    <div class="suggestions-list">
+                        <span class="suggestion">Salvatore $$$$</span>
+                        <span class="suggestion">Mizu $$$ (Japonês)</span>
+                        <span class="suggestion">Sô Bello $$$</span>
+                        <span class="suggestion">Casa da Praça $$$</span>
+                        <span class="suggestion">Bistrô Capitólio $$$</span>
+                    </div>
+                </div>
+
+                <div class="suggestion-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <h3>Restaurantes Diurnos</h3>
+                    </div>
+                    <div class="suggestions-list">
+                        <span class="suggestion">Hud's Escarpas $$$$ </span>
+                        <span class="suggestion">Restaurante do Turvo $$$$ </span>
+                        <span class="suggestion">Salvatore Marine $$$$</span>
+                    </div>
+                </div>
+
+                <div class="suggestion-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                        <h3>Bares Noturnos</h3>
+                    </div>
+                    <div class="suggestions-list">
+                        <span class="suggestion">Hud's Escarpas $$$$ </span>
+                        <span class="suggestion">Canoa Bonita $$$$</span>
+                        <span class="suggestion">Scarpas Bier Haus $$$</span>
+                        <span class="suggestion">Petiscaria Novo Sabor $$$</span>
+                    </div>
+                </div>
+
+                <div class="suggestion-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <h3>Bares Diurnos</h3>
+                    </div>
+                    <div class="suggestions-list">
+                        <span class="suggestion">Canoa Bonita $$$$</span>
+                    </div>
+                </div>
+
+                <div class="suggestion-category">
+                    <div class="category-header">
+                        <svg class="category-icon" fill="none" stroke="#AE562B" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 8h10m0 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v2m10 0v10a2 2 0 01-2 2H9a2 2 0 01-2-2V8" />
+                        </svg>
+                        <h3>Cafeterias</h3>
+                    </div>
+                    <div class="suggestions-list">
+                        <span class="suggestion">Bourbon $$$</span>
+                        <span class="suggestion">Don Lorenzo $$$</span>
+                    </div>
+                </div>
+                <div class="info-text">
+                    <p><strong>Acesse o Google para mais informações do local desejado!</strong></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Kit Enxoval -->
+        <section id="kitenxoval" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#5D8072" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="section-icon lucide lucide-bed-double-icon lucide-bed-double">
+                    <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                    <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                    <path d="M12 4v6" />
+                    <path d="M2 18h20" />
+                </svg>
+
+                <div class="section-title">
+                    <h2>Enxoval Extra</h2>
+                </div>
+            </div>
+
+            <div class="partners-grid">
+
+                <div class="info-text">
+                    <p>
+                        Nossa estadia conta com kit de enxoval de cama e banho disponível em cada configuração de quarto, já incluídos no valor da sua diária. Para solicitar algum item de enxoval extra, esse pedido deverá ser feito até as 11h pelo whatsapp, e será cobrado as seguintes taxas
+                    </p>.
+                    
+                </div>
+
+
+
+                <!-- Enxoval de Cama e Banho -->
+                <div class="partner-card">
+
+                    
+
+
+                    <div class="partner-content">
+
+
+
+                        <div class="partner-routes">
+                            <div class="route-item">
+                                <span class="route-name">Travesseiro / Fronha</span>
+                                <span class="route-price">R$ 20</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">Toalha de banho</span>
+                                <span class="route-price">R$ 15</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">Toalha de rosto</span>
+                                <span class="route-price">R$ 10</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">Toalha de piscina</span>
+                                <span class="route-price">R$ 7</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">Lençol</span>
+                                <span class="route-price">R$ 25</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">Virol</span>
+                                <span class="route-price">R$ 25</span>
+                            </div>
+                        </div>
+
+
+
+                        <a href="https://wa.me/5537999345635" target="_blank" class="partner-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                            Solicite pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-text">
+                    <p>
+                        As toalhas de banho e rosto poderão ser solicitadas as trocas sem custo, depois de uma noite dormida e a segunda diária contratada, jogando-as no chão e deixando a plaquinha na porta do quarto solicitando a arrumação. Lembrando sempre que podemos ajudar o meio ambiente invitando trocas de toalhas limpas. </p>.
+                    
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+
+        <script>
+            function showSection(sectionId) {
+                // Hide all sections
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                // Show the selected section
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+            }
+
+            // Show home section by default
+            document.addEventListener('DOMContentLoaded', function () {
+                showSection('home');
+            });
+
+            // Função para fechar o modal
+            function closeModal() {
+                const modal = document.getElementById('welcomeModal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            }
+
+            // Mostrar modal ao carregar a página
+            window.addEventListener('load', function () {
+                const modal = document.getElementById('welcomeModal');
+                if (modal) {
+                    modal.style.display = 'block';
+                }
+            });
+
+            // Fechar modal ao clicar no X ou fora do modal
+            window.addEventListener('click', function (event) {
+                const modal = document.getElementById('welcomeModal');
+                const closeBtn = document.querySelector('.close');
+
+                if (event.target === modal || event.target === closeBtn) {
+                    closeModal();
+                }
+            });
+
+            const modal = document.getElementById("welcomeModal");
+            const closeBtn = document.querySelector(".close");
+
+            // Abre modal automaticamente ao carregar a página
+            window.onload = () => {
+                modal.style.display = "block";
+            };
+
+            // Fecha modal ao clicar no X
+            closeBtn.onclick = () => modal.style.display = "none";
+
+            // Fecha modal ao clicar fora dele
+            window.onclick = (e) => {
+                if (e.target === modal) modal.style.display = "none";
+            };
+        </script>
+</body>
+
+</html>
