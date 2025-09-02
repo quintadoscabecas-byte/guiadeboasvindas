@@ -27,6 +27,33 @@
             text-align: center;
         }
 
+
+        .google-maps {
+            background: #AE562B;
+        }
+
+        .waze {
+    background:#AE562B;
+}
+
+        .location-btn {
+            
+            justify-content: center;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -1038,7 +1065,7 @@
 
         .enter-button {
             background: white;
-    color: #8B4A26;
+            color: #8B4A26;
             border: none;
             padding: 15px 40px;
             font-size: 1.2em;
@@ -1310,6 +1337,17 @@
                         <path d="M2 18h20" />
                     </svg>
                     <span>Enxoval Extra</span>
+                </div>
+
+                <div class="nav-item" onclick="showSection('localizacao')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="#AE562B">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    <span>Localização</span>
                 </div>
 
 
@@ -1671,7 +1709,7 @@
                         </div>
 
                         <div class="partner-notes">
-                            
+
                             <p><strong>Parada para almoço:</strong> Terá uma parada para almoço onde será definido na
                                 lancha o local, lembrando que temos 3 opção de restaurantes. *Este por conta de cada
                                 passageiro.</p>
@@ -1746,12 +1784,12 @@
                         </div>
 
                         <div class="partner-notes">
-                          
+
                             <p><em>* obs: O local de onde saem as embarcações ficam a 30 minutos de carro da Pousada, é
                                     de extrema importância a chegada com antecedência no local. A Agência se encarregará
                                     de passar todas as informações da localização do embarque.</em></p>
 
-                            
+
                             <p><em>* Obs: <strong>A Pousada Quinta dos Cabeças terceiriza os serviços de passeios,
                                         cabendo total responsabilidade
                                         de qualquer natureza, à empresa parceira. A mesma trabalha com lanchas e carros
@@ -1814,7 +1852,7 @@
                 <div class="info-card">
                     <div class="card-header">
 
-                        <h3>CAT – Centro de Apoio ao Turista | Loja de Artesenato</h3>
+                        <h3>CAT – Centro de Apoio ao Turista | Loja de Artesanato</h3>
 
                     </div>
                     <div class="contact-info">
@@ -2794,11 +2832,10 @@
                 <div class="delivery-card">
                     <div class="delivery-header">
                         <!-- Ícone restaurante -->
-                            <span class="material-symbols-outlined delivery-icon"
-                                style="color:#AE562B; font-size:26px;">
-                                restaurant
-                            </span>
-                            <h3>Pizzaria Capitólio $$</h3>
+                        <span class="material-symbols-outlined delivery-icon" style="color:#AE562B; font-size:26px;">
+                            restaurant
+                        </span>
+                        <h3>Pizzaria Capitólio $$</h3>
                     </div>
                     <p class="delivery-type">Pizza</p>
                     <a href="https://wa.me/5537991271084" target="_blank" class="delivery-whatsapp">
@@ -2922,6 +2959,7 @@
                         <span class="suggestion">Canoa Bonita $$$$</span>
                         <span class="suggestion">Scarpas Bier Haus $$$</span>
                         <span class="suggestion">Petiscaria Novo Sabor $$$</span>
+                        <span class="suggestion">OrlaBeach $$$</span>
                     </div>
                 </div>
 
@@ -2935,6 +2973,8 @@
                     </div>
                     <div class="suggestions-list">
                         <span class="suggestion">Canoa Bonita $$$$</span>
+                        <span class="suggestion">OrlaBeach $$$</span>
+
                     </div>
                 </div>
 
@@ -2987,9 +3027,11 @@
 
                 <div class="info-text">
                     <p>
-                        Nossa estadia conta com kit de enxoval de cama e banho disponível em cada configuração de quarto, já incluídos no valor da sua diária. Para solicitar algum item de enxoval extra, esse pedido deverá ser feito até as 11h pelo whatsapp, e será cobrado as seguintes taxas
+                        Nossa estadia conta com kit de enxoval de cama e banho disponível em cada configuração de
+                        quarto, já incluídos no valor da sua diária. Para solicitar algum item de enxoval extra, esse
+                        pedido deverá ser feito até as 11h pelo whatsapp, e será cobrado as seguintes taxas
                     </p>.
-                    
+
                 </div>
 
 
@@ -2997,7 +3039,7 @@
                 <!-- Enxoval de Cama e Banho -->
                 <div class="partner-card">
 
-                    
+
 
 
                     <div class="partner-content">
@@ -3045,10 +3087,67 @@
 
                 <div class="info-text">
                     <p>
-                        As toalhas de banho e rosto poderão ser solicitadas as trocas sem custo, depois de uma noite dormida e a segunda diária contratada, jogando-as no chão e deixando a plaquinha na porta do quarto solicitando a arrumação. Lembrando sempre que podemos ajudar o meio ambiente invitando trocas de toalhas limpas. </p>.
-                    
+                        As toalhas de banho e rosto poderão ser solicitadas as trocas sem custo, depois de uma noite
+                        dormida e a segunda diária contratada, jogando-as no chão e deixando a plaquinha na porta do
+                        quarto solicitando a arrumação. Lembrando sempre que podemos ajudar o meio ambiente invitando
+                        trocas de toalhas limpas. </p>.
+
                 </div>
 
+
+
+            </div>
+        </section>
+
+
+        <!-- Localização -->
+        <section id="localizacao" class="section hidden">
+            <button class="back-btn" onclick="showSection('home')">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <div class="section-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#5D8072" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
+        
+                <div class="section-title">
+                    <h2>Localização</h2>
+                </div>
+            </div
+
+            <div class="partners-grid">
+
+                <div class="location-buttons">
+                    <a href="https://maps.app.goo.gl/vsRjhFyMAhnGcEah7?g_st=iwb" target="_blank"
+                        class="location-btn google-maps">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        <div>
+                            <strong>Google Maps</strong>
+                            <span>Abrir no Google Maps</span>
+                        </div>
+                    </a>
+
+                    <a href="https://waze.com/ul/h6ur6b1hk2" target="_blank" class="location-btn waze">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                        <div>
+                            <strong>Waze</strong>
+                            <span>Abrir no Waze</span>
+                        </div>
+                    </a>
+                </div>
 
 
             </div>
